@@ -1,0 +1,40 @@
+<h1>Hello {{FirstName}} {{LastName}}</h1>
+<h3>Username: {{Username}}</h3>
+<br>
+<h4>Posts created by {{FirstName}}</h4>
+<ul>
+{{#each Posts}}
+<div>Post Title: {{PostTitle}} </div>
+</br>
+<div>{{PostBody}}</div>
+</br>
+{{/each}}
+</ul>
+<br>
+
+<br>
+<form id="adminView" name="adminView" method="get" action="/users/admin">
+   <div>
+     <button type="submit" class="btn btn-primary">Go To Admin Page</button>
+  </div>
+</form>
+<br>
+<form id="logout" name="logout" method="put" action="/users/logout">
+   <div>
+     <button type="submit" class="btn btn-danger">Log Out</button>
+  </div>
+</form>
+</br>
+
+<form id="posts" name="posts" method="put" action="/users/createPosts">
+   <div>
+      <button type="submit" class="btn btn-success">Make a Post</button>
+  </div>
+</form>
+</br>
+
+<form id="posts" name="posts" method="put" action="/users/updatePost">
+   <div>
+      <button type="submit">Update a Post</button>
+  </div>
+</form>
